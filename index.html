@@ -31,14 +31,14 @@
         .login-box {
             background-color: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 500px;
             text-align: center;
         }
 
         .logo {
-            width: 60px;
+            width: 50px;
             margin-bottom: 20px;
             margin-right: 85%;
         }
@@ -52,6 +52,7 @@
         h3{
             margin-right: 70%;
             font-size: 15px;
+            font-weight: normal;
         }
 
         .input-box {
@@ -88,7 +89,7 @@
 
         .other-options a {
             display: block;
-            color: #1a73e8;
+            color: #414242;
             font-size: 14px;
             text-decoration: none;
             margin: 5px 0;
@@ -102,10 +103,12 @@
 <body>
     <div class="container">
         <div class="login-box">
+            <div id="block1">
             <img src="google.png" alt="Google Logo" class="logo">
             <h1>Connexion</h1>
             <h3>Accéder à Forms</h3>
             <br>
+            </div>
             <form action="#">
                 <div class="input-box">
                     <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
